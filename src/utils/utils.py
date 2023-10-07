@@ -24,5 +24,11 @@ def parse_argument():
     parser.add_argument(
         "--output_dir", type=str, default="./results", help="directory to store results"
     )
+    parser.add_argument(
+        "--text",
+        type=str,
+        default="My name is Tobi Olatunji, and my native language is Yoruba",
+        help="sample text to speak",
+    )
 
     return parser.parse_args()

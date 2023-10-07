@@ -31,7 +31,20 @@ Recent advances in speech synthesis have enabled may useful useful applications 
           Creation.
 
 
-#### AfriSpeech Data Stats
+### How to Run the Code
+
+1. Create a virtual environment `conda create -n afro_tts python=3.9`
+
+2. Activate the virtual environment `conda activate afro_tts`
+
+3. Install packages `pip install --upgrade transformers accelerate`
+
+5. Install requirements `pip3 install -r requirements.txt`
+
+6. For Inference Run `python src/inference/inference.py`
+
+
+### AfriSpeech Data Stats
 
 - Total Number of Unique Speakers: 2,463
 - Female/Male/Other Ratio: 57.11/42.41/0.48
