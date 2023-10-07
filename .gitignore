@@ -1,0 +1,5 @@
+.DS_Store
+.idea/
+data/*.wav
+results/*.wav
+src/.DS_Store
