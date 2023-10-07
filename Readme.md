@@ -41,7 +41,7 @@ Recent advances in speech synthesis have enabled may useful useful applications 
 
 5. Install requirements `pip3 install -r requirements.txt`
 
-6. For Inference Run `python src/inference/inference.py`
+6. For Inference Run `python src/inference/inference.py --model_id_or_path microsoft/speecht5_tts`
 
 
 ### AfriSpeech Data Stats
