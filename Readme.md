@@ -37,7 +37,7 @@ Recent advances in speech synthesis have enabled may useful useful applications 
 
 2. Activate the virtual environment `conda activate afro_tts`
 
-3. Install packages `pip install --upgrade transformers accelerate`
+3. Install packages `pip install --upgrade transformers accelerate sentencepiece datasets[audio]`
 
 5. Install requirements `pip3 install -r requirements.txt`
 
