@@ -1,9 +1,9 @@
 # AfriSpeech-TTS-100
 
-#### Pan-African parameter-efficient multi-accent multi-speaker TTS
-
+#### African Digital Voices: Pan-African parameter-efficient multi-accent multi-speaker TTS
 
 [By Intron Innovation](https://www.intron.io)
+
 [By BioRAMP](https://www.bioramp.org)
 
 Contributor List: []
@@ -31,6 +31,37 @@ Recent advances in speech synthesis have enabled may useful useful applications 
           Creation.
 
 
+
+### How to Access the Data
+
+Train, dev, and test sets have been uploaded to an s3 bucket for public access.
+Here are the steps to access the data
+
+1. If not installed already, download and install `awscli` for your 
+platform (linux/mac/windows) following the instructions [here](https
+://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) 
+
+2. Create a download folder e.g. `mkdir AfriSpeech-TTS`
+
+3. Request aws credentials to access the data by sending an email
+with title "AfriSpeech-TTS S3 Credentials Request" to tobi@intron.io
+
+4. Once you receive credentials, cd into your data directory `cd AfriSpeech-TTS`
+
+5. Type `aws configure` at the command line, hit enter, and fill in the following based on the credentials you receive.
+    ```
+    AWS Access Key ID [None]: <ACCESS-KEY-ID-FROM-CREDENTIALS-SENT>
+    AWS Secret Access Key [None]: <SECRET-KEY-FROM-CREDENTIALS-SENT>
+    Default region name [None]: eu-west-2
+    Default output format [None]: <leave this blank, hit enter>
+    ```
+
+6. Run `aws s3 cp s3://intron-open-source/AfriSpeech-TTS . --recursive` to download all the audio
+
+7. Download may take over 2hrs depending on your bandwidth. Train set: 28,565, 103G; Dev set: 3,330, 5.2G; Test set: 4,161, xG
+
+
+
 ### How to Run the Code
 
 1. Create a virtual environment `conda create -n afro_tts python=3.9`
@@ -46,41 +77,36 @@ Recent advances in speech synthesis have enabled may useful useful applications 
 
 ### AfriSpeech Data Stats
 
-- Total Number of Unique Speakers: 2,463
-- Female/Male/Other Ratio: 57.11/42.41/0.48
+- Total Number of Unique Speakers: 751
+- Female/Male/Other Ratio: 54.45/44.36/1.19
 - Data was first split on speakers. Speakers in Train/Dev/Test do not cross partitions
 
 |  | Train | Dev | Test |
 | ----------- | ----------- | ----------- | ----------- |
-| # Speakers | 1466 | 247 | 750 |
-| # Seconds | 624228.83 | 31447.09 | 67559.10 |
-| # Hours | 173.4 | 8.74 | 18.77 |
-| # Accents | 71 | 45 | 108 |
-| Avg secs/speaker | 425.81 | 127.32 | 90.08 |
-| Avg num clips/speaker | 39.56 | 13.08 | 8.46 |
-| Avg num speakers/accent | 20.65 | 5.49 | 6.94 |
-| Avg secs/accent | 8791.96 | 698.82 | 625.55 |
-| # clips general domain | 21682 | 1407 | 2723 |
-| # clips clinical domain | 36318 | 1824 | 3623 |
+| # Speakers | 600 | 76 | 75 |
+| # Seconds | 383411.40 | 47506.20 | 57492.25 |
+| # Hours | 106.5 | 13.2 | 15.97 |
+| # Accents | 72 | 25 | 25 |
+| Avg secs/speaker | 639.02 | 625.08 | 766.56 |
+| Avg num clips/speaker | 47.61 | 43.82 | 55.48 |
+| Avg num speakers/accent | 8.33  | 3.04 | 3.0 |
+| Avg secs/accent | 5325.16 | 1900.25 | 2299.69 |
 
 
 #### Country Stats
 
-| Country | Clips | Speakers | Duration (seconds) | Duration (hrs) |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| NG | 45875 | 1979 | 512646.88 | 142.40 |
-| KE | 8304 | 137 | 75195.43 | 20.89 |
-| ZA | 7870 | 223 | 81688.11 | 22.69 |
-| GH | 2018 | 37 | 18581.13 | 5.16 |
-| BW | 1391 | 38 | 14249.01 | 3.96 |
-| UG | 1092 | 26 | 10420.42 | 2.89 |
-| RW | 469 | 9 | 5300.99 | 1.47 |
-| US | 219 | 5 | 1900.98 | 0.53 |
-| TR | 66 | 1 | 664.01 | 0.18 |
-| ZW | 63 | 3 | 635.11 | 0.18 |
-| MW | 60 | 1 | 554.61 | 0.15 |
-| TZ | 51 | 2 | 645.51 | 0.18 |
-| LS | 7 | 1 | 78.40 | 0.02 |
+| Country | Clips | Speakers | Accents  |  Duration (seconds) | Duration (hrs) |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| NG | 25564 | 549 | 48 | 359469.91 | 99.85 |
+| KE | 5307 | 58 | 8 | 59231.35 | 16.45 |
+| ZA | 4279 | 125 | 20 | 59066.38 | 16.41 |
+| GH | 727 | 4 | 3 | 8200.78 | 2.28 |
+| ZW | 47 | 6 | 3 | 718.90 | 0.20 |
+| RW | 40 | 1 | 1 | 524.41 | 0.15 |
+| SL | 38 | 1 | 1 | 504.21 | 0.14 |
+| UG | 26 | 2 | 1 | 302.59 | 0.08 |
+| ZM | 8 | 1 | 1 | 149.86 | 0.04 |
+| US | 1 | 1 | 1 | 8.18 | 0.00 |
 
 #### Accent Stats
 
