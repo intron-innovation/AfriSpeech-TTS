@@ -1,4 +1,4 @@
-# AfriSpeech-TTS-100
+# AfriSpeech-TTS
 
 #### African Digital Voices: Pan-African parameter-efficient multi-accent multi-speaker TTS
 
@@ -112,123 +112,83 @@ with title "AfriSpeech-TTS S3 Credentials Request" to tobi@intron.io
 
 |  Accent | Clips | Speakers | Duration (s) | Country | Splits | 
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| yoruba | 15407 | 683 | 161587.55 | US,NG | train,test,dev |
-| igbo | 8677 | 374 | 93035.79 | US,NG,ZA | train,test,dev |
-| swahili | 6320 | 119 | 55932.82 | KE,TZ,ZA,UG | train,test,dev |
-| hausa | 5765 | 248 | 70878.67 | NG | train,test,dev |
-| ijaw | 2499 | 105 | 33178.9 | NG | train,test,dev |
-| afrikaans | 2048 | 33 | 20586.49 | ZA | train,test,dev |
-| idoma | 1877 | 72 | 20463.6 | NG | train,test,dev |
-| zulu | 1794 | 52 | 18216.97 | ZA,TR,LS | dev,train,test |
-| setswana | 1588 | 39 | 16553.22 | BW,ZA | dev,test,train |
-| twi | 1566 | 22 | 14340.12 | GH | test,train,dev |
-| isizulu | 1048 | 48 | 10376.09 | ZA | test,train,dev |
-| igala | 919 | 31 | 9854.72 | NG | train,test |
-| izon | 838 | 47 | 9602.53 | NG | train,dev,test |
-| kiswahili | 827 | 6 | 8988.26 | KE | train,test |
-| ebira | 757 | 42 | 7752.94 | NG | train,test,dev |
-| luganda | 722 | 22 | 6768.19 | UG,BW,KE | test,dev,train |
-| urhobo | 646 | 32 | 6685.12 | NG | train,dev,test |
-| nembe | 578 | 16 | 6644.72 | NG | train,test,dev |
-| ibibio | 570 | 39 | 6489.29 | NG | train,test,dev |
-| pidgin | 514 | 20 | 5871.57 | NG | test,train,dev |
-| luhya | 508 | 4 | 4497.02 | KE | train,test |
-| kinyarwanda | 469 | 9 | 5300.99 | RW | train,test,dev |
-| xhosa | 392 | 12 | 4604.84 | ZA | train,dev,test |
-| tswana | 387 | 18 | 4148.58 | ZA,BW | train,test,dev |
-| esan | 380 | 13 | 4162.63 | NG | train,test,dev |
-| alago | 363 | 8 | 3902.09 | NG | train,test |
-| tshivenda | 353 | 5 | 3264.77 | ZA | test,train |
-| fulani | 312 | 18 | 5084.32 | NG | test,train |
-| isoko | 298 | 16 | 4236.88 | NG | train,test,dev |
-| akan (fante) | 295 | 9 | 2848.54 | GH | train,dev,test |
-| ikwere | 293 | 14 | 3480.43 | NG | test,train,dev |
-| sepedi | 275 | 10 | 2751.68 | ZA | dev,test,train |
-| efik | 269 | 11 | 2559.32 | NG | test,train,dev |
-| edo | 237 | 12 | 1842.32 | NG | train,test,dev |
-| luo | 234 | 4 | 2052.25 | UG,KE | test,train,dev |
-| kikuyu | 229 | 4 | 1949.62 | KE | train,test,dev |
-| bekwarra | 218 | 3 | 2000.46 | NG | train,test |
-| isixhosa | 210 | 9 | 2100.28 | ZA | train,dev,test |
-| hausa/fulani | 202 | 3 | 2213.53 | NG | test,train |
-| epie | 202 | 6 | 2320.21 | NG | train,test |
-| isindebele | 198 | 2 | 1759.49 | ZA | train,test |
-| venda and xitsonga | 188 | 2 | 2603.75 | ZA | train,test |
-| sotho | 182 | 4 | 2082.21 | ZA | dev,test,train |
-| akan | 157 | 6 | 1392.47 | GH | test,train |
-| nupe | 156 | 9 | 1608.24 | NG | dev,train,test |
-| anaang | 153 | 8 | 1532.56 | NG | test,dev |
-| english | 151 | 11 | 2445.98 | NG | dev,test |
-| afemai | 142 | 2 | 1877.04 | NG | train,test |
-| shona | 138 | 8 | 1419.98 | ZA,ZW | test,train,dev |
-| eggon | 137 | 5 | 1833.77 | NG | test |
-| luganda and kiswahili | 134 | 1 | 1356.93 | UG | train |
-| ukwuani | 133 | 7 | 1269.02 | NG | test |
-| sesotho | 132 | 10 | 1397.16 | ZA | train,dev,test |
-| benin | 124 | 4 | 1457.48 | NG | train,test |
-| kagoma | 123 | 1 | 1781.04 | NG | train |
-| nasarawa eggon | 120 | 1 | 1039.99 | NG | train |
-| tiv | 120 | 14 | 1084.52 | NG | train,test,dev |
-| south african english | 119 | 2 | 1643.82 | ZA | train,test |
-| borana | 112 | 1 | 1090.71 | KE | train |
-| swahili ,luganda ,arabic | 109 | 1 | 929.46 | UG | train |
-| ogoni | 109 | 4 | 1629.7 | NG | train,test |
-| mada | 109 | 2 | 1786.26 | NG | test |
-| bette | 106 | 4 | 930.16 | NG | train,test |
-| berom | 105 | 4 | 1272.99 | NG | dev,test |
-| bini | 104 | 4 | 1499.75 | NG | test |
-| ngas | 102 | 3 | 1234.16 | NG | train,test |
-| etsako | 101 | 4 | 1074.53 | NG | train,test |
-| okrika | 100 | 3 | 1887.47 | NG | train,test |
-| venda | 99 | 2 | 938.14 | ZA | train,test |
-| siswati | 96 | 5 | 1367.45 | ZA | dev,train,test |
-| damara | 92 | 1 | 674.43 | NG | train |
-| yoruba, hausa | 89 | 5 | 928.98 | NG | test |
-| southern sotho | 89 | 1 | 889.73 | ZA | train |
-| kanuri | 86 | 7 | 1936.78 | NG | test,dev |
-| itsekiri | 82 | 3 | 778.47 | NG | test,dev |
-| ekpeye | 80 | 2 | 922.88 | NG | test |
-| mwaghavul | 78 | 2 | 738.02 | NG | test |
-| bajju | 72 | 2 | 758.16 | NG | test |
-| luo, swahili | 71 | 1 | 616.57 | KE | train |
-| dholuo | 70 | 1 | 669.07 | KE | train |
-| ekene | 68 | 1 | 839.31 | NG | test |
-| jaba | 65 | 2 | 540.66 | NG | test |
-| ika | 65 | 4 | 576.56 | NG | test,dev |
-| angas | 65 | 1 | 589.99 | NG | test |
-| ateso | 63 | 1 | 624.28 | UG | train |
-| brass | 62 | 2 | 900.04 | NG | test |
-| ikulu | 61 | 1 | 313.2 | NG | test |
-| eleme | 60 | 2 | 1207.92 | NG | test |
-| chichewa | 60 | 1 | 554.61 | MW | train |
-| oklo | 58 | 1 | 871.37 | NG | test |
-| meru | 58 | 2 | 865.07 | KE | train,test |
-| agatu | 55 | 1 | 369.11 | NG | test |
-| okirika | 54 | 1 | 792.65 | NG | test |
-| igarra | 54 | 1 | 562.12 | NG | test |
-| ijaw(nembe) | 54 | 2 | 537.56 | NG | test |
-| khana | 51 | 2 | 497.42 | NG | test |
-| ogbia | 51 | 4 | 461.15 | NG | test,dev |
-| gbagyi | 51 | 4 | 693.43 | NG | test |
-| portuguese | 50 | 1 | 525.02 | ZA | train |
-| delta | 49 | 2 | 425.76 | NG | test |
-| bassa | 49 | 1 | 646.13 | NG | test |
-| etche | 49 | 1 | 637.48 | NG | test |
-| kubi | 46 | 1 | 495.21 | NG | test |
-| jukun | 44 | 2 | 362.12 | NG | test |
-| igbo and yoruba | 43 | 2 | 466.98 | NG | test |
-| urobo | 43 | 3 | 573.14 | NG | test |
-| kalabari | 42 | 5 | 305.49 | NG | test |
-| ibani | 42 | 1 | 322.34 | NG | test |
-| obolo | 37 | 1 | 204.79 | NG | test |
-| idah | 34 | 1 | 533.5 | NG | test |
-| bassa-nge/nupe | 31 | 3 | 267.42 | NG | test,dev |
-| yala mbembe | 29 | 1 | 237.27 | NG | test |
-| eket | 28 | 1 | 238.85 | NG | test |
-| afo | 26 | 1 | 171.15 | NG | test |
-| ebiobo | 25 | 1 | 226.27 | NG | test |
-| nyandang | 25 | 1 | 230.41 | NG | test |
-| ishan | 23 | 1 | 194.12 | NG | test |
-| bagi | 20 | 1 | 284.54 | NG | test |
-| estako | 20 | 1 | 480.78 | NG | test |
-| gerawa | 13 | 1 | 342.15 | NG | test |
+| Swahili | 2993 | 40 | 36794.19 | train,test,dev |
+| Zulu | 1735 | 38 | 23158.02 | train,test,dev |
+| Xhosa | 116 | 9 | 1427.93 | train,test,dev |
+| Afrikaans | 503 | 9 | 7482.53 | train,test |
+| Swahili, Kamba | 498 | 2 | 4101.61 | train |
+| Shona | 276 | 10 | 3111.83 | train,dev |
+| Tswana | 538 | 12 | 7083.35 | train,test,dev |
+| Hindi | 19 | 1 | 326.53 | train |
+| Southern Sotho | 86 | 9 | 1120.94 | train,test,dev |
+| Siswati | 47 | 6 | 1008.68 | train,dev |
+| Pedi | 138 | 6 | 1844.98 | train,dev |
+| Akan | 586 | 2 | 6668.93 | train |
+| Tsonga | 12 | 2 | 124.15 | train,test |
+| Luganda | 26 | 2 | 302.59 | train |
+| Ndebele | 29 | 3 | 419.51 | train |
+| Luhya | 52 | 1 | 705.17 | train |
+| Swati | 6 | 1 | 77.64 | train |
+| Portuguese | 2 | 1 | 30.24 | train |
+| Twi | 98 | 1 | 1070.99 | train |
+| Kikuyu | 84 | 2 | 1267.97 | train |
+| South African English | 78 | 1 | 1185.14 | train |
+| Ga | 43 | 1 | 460.86 | train |
+| Northern Sotho | 23 | 2 | 405.53 | train,dev |
+| Kikuyu, Swahili | 2 | 1 | 14.2 | train |
+| Hausa | 8208 | 154 | 110710.67 | train,test,dev |
+| Meru | 70 | 1 | 912.74 | train |
+| Venda, Tsonga | 63 | 1 | 1119.13 | train |
+| Venda | 17 | 1 | 262.38 | train |
+| Yoruba | 8181 | 170 | 114025.69 | train,test,dev |
+| Kinyarwanda | 40 | 1 | 524.41 | train |
+| Hausa, Yoruba, Pidgin | 268 | 2 | 4427.57 | train,test |
+| Ijaw | 1096 | 22 | 17340.83 | train,test,dev |
+| Ibibio | 518 | 13 | 6742.1 | train,test,dev |
+| Igbo | 2209 | 50 | 32033.57 | train,test,dev |
+| Igala | 587 | 10 | 11252.44 | train,dev |
+| Benin | 189 | 2 | 3182.55 | train |
+| Obolo | 2 | 1 | 12.57 | train |
+| Idoma | 728 | 14 | 10673.23 | train,test,dev |
+| Urhobo | 368 | 8 | 5555.68 | train |
+| Nupe | 57 | 3 | 973.86 | train,dev |
+| Gwari | 30 | 1 | 305.3 | train |
+| Tula | 17 | 2 | 167.67 | train,test |
+| Epie | 28 | 2 | 361.54 | train |
+| Tiv | 189 | 6 | 2572.66 | train |
+| Fulani | 102 | 4 | 2095.19 | train,test,dev |
+| Isoko | 176 | 3 | 2557.76 | train,dev |
+| Igede | 17 | 1 | 304.66 | train |
+| Bette | 22 | 2 | 284.87 | train,test |
+| Lunguda | 2 | 1 | 42.36 | train |
+| Etsako | 37 | 3 | 400.2 | train,dev |
+| Ogbia | 6 | 1 | 78.48 | train |
+| Utonkon | 141 | 2 | 2559.5 | train |
+| Bajju | 17 | 1 | 182.39 | train |
+| Kanuri | 36 | 3 | 397.78 | train,test |
+| Hausa, Higgi, Pidgin | 132 | 1 | 2221.02 | train |
+| Dera | 15 | 1 | 166.64 | train |
+| English | 149 | 1 | 2137.42 | train |
+| Gerawa | 21 | 1 | 272.22 | train |
+| Anaang | 3 | 1 | 31.14 | train |
+| Yoruba, Pidgin | 120 | 1 | 2070.34 | train |
+| Hausa, Fulani | 4 | 1 | 33.25 | train |
+| Ikulu | 6 | 1 | 54.91 | train |
+| Pidgin | 60 | 7 | 809.06 | train,test,dev |
+| Kagoma | 1 | 1 | 21.5 | train |
+| Etuno | 146 | 1 | 2025.85 | train |
+| Ebira | 168 | 4 | 2285.19 | train |
+| Ogoni | 1 | 1 | 7.56 | train |
+| Bekwarra | 32 | 1 | 416.87 | train |
+| Ogba | 2 | 1 | 34.22 | train |
+| Esan | 80 | 2 | 1023.47 | train |
+| Ika | 1 | 1 | 12.24 | train |
+| Chichewa | 8 | 1 | 149.86 | test |
+| Kamba, Swahili | 400 | 1 | 3827.56 | test |
+| Tshivenda | 13 | 1 | 217.05 | test |
+| Jarawa | 25 | 1 | 319.4 | test |
+| Kubi | 1 | 1 | 10.19 | test |
+| Otjiherero | 5 | 1 | 61.7 | dev |
+| Nyandang | 68 | 1 | 774.0 | dev |
+| Hausa, Pidgin | 14 | 1 | 223.89 | dev |
+| Unknown | 3170 | 69 | 36950.02 | train,test,dev |
