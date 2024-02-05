@@ -17,7 +17,7 @@ Contributor List: []
 
 #### Abstract [draft]
 
-Recent advances in speech synthesis have enabled may useful useful applications like audio directions in Google Maps
+Recent advances in speech synthesis have enabled many useful useful applications like audio directions in Google Maps
 , voice cloning, screen readers, and automated content  generation on social media platforms like Tik-tok and
  Instagram. However many of these systems are dominated by voices sourced from data rich geographies with personas
   representative of their source data. Although 3000 of the world's languages are domiciled in Africa, African voices
