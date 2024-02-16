@@ -64,6 +64,8 @@ with title "AfriSpeech-TTS S3 Credentials Request" to tobi@intron.io
 
 ### How to Run the Code
 
+#### For Inference
+
 1. Create a virtual environment `conda create -n afro_tts python=3.9`
 
 2. Activate the virtual environment `conda activate afro_tts`
@@ -74,6 +76,10 @@ with title "AfriSpeech-TTS S3 Credentials Request" to tobi@intron.io
 
 6. For Inference Run `python src/inference/inference.py --model_id_or_path microsoft/speecht5_tts`
 
+## Training 
+```bash 
+python3 src/train/train.py -c src/config/config_speechT5.ini
+```
 
 ### AfriSpeech Data Stats
 
