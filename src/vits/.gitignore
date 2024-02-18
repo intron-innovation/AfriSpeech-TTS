@@ -1,0 +1,15 @@
+DUMMY*
+logs
+__pycache__
+.ipynb_checkpoints
+.*.swp
+
+build
+*.c
+monotonic_align/monotonic_align
+layers_dora.py
+LoRA
+train_ms_adapt.py
+train_ms_ft_copy.py
+models_adapt.py
+modules_adapt.py
