@@ -12,7 +12,7 @@ test
 checkpoints
 *.wav
 afrispeech_16k
-afrispeech_16k_clean
+afrispeech_16k_*
 .ipynb_checkpoints
 *.sh
 notebooks/afrotts.ipynb
