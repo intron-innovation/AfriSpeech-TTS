@@ -17,3 +17,5 @@ afrispeech_16k_*
 *.sh
 notebooks/afrotts.ipynb
 afritts_vctk*
+*.json
+nemo_experiments

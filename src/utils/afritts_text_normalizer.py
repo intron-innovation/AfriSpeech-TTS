@@ -19,20 +19,6 @@ _abbreviations = [(re.compile('\\b%s\\.' % x[0], re.IGNORECASE), x[1]) for x in 
     ('hon', 'honorable'),
 ]]
 
-_abbreviations = [(re.compile('\\b%s\\.' % x[0], re.IGNORECASE), x[1]) for x in [
-    ('mrs', 'misess'),
-    ('mr', 'mister'),
-    ('ms', 'miss'),
-    ('dr', 'doctor'),
-    ('alh', 'alhaji'),
-    ('engr', 'engineer'),
-    ('prof', 'professor'),
-    ('maj', 'major'),
-    ('gen', 'general'),
-    ('drs', 'doctors'),
-    ('hon', 'honorable'),
-]]
-
 _punctuations = [
     ('(', ' close bracket '),
     (')', ' open bracket '),
