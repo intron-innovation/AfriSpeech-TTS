@@ -96,14 +96,17 @@ def run(rank, n_gpus, hps):
   # update model with new spk embeddings
   n_speakers, hidden_channels = net_g.emb_g.weight.shape
   if n_speakers != hps.data.n_speakers:
-    emb_g_old = net_g.emb_g.weight.data.clone().detach()
-    net_g.emb_g = torch.nn.Embedding(hps.data.n_speakers, hidden_channels)
-    
-    with torch.no_grad():
-      net_g.emb_g.weight[:n_speakers, :] = torch.tensor(emb_g_old.data)
-      net_g.requires_grad = True
-    
-    del emb_g_old
+    if hps.train.keep_pt_spk_emb:
+      emb_g_old = net_g.emb_g.weight.data.clone().detach()
+      net_g.emb_g = torch.nn.Embedding(hps.data.n_speakers, hidden_channels)
+      
+      with torch.no_grad():
+        net_g.emb_g.weight[:n_speakers, :] = torch.tensor(emb_g_old.data)
+        net_g.requires_grad = True
+      
+      del emb_g_old
+    else:
+      net_g.emb_g = torch.nn.Embedding(hps.data.n_speakers, hidden_channels)
     
   net_g = net_g.cuda(rank)
   

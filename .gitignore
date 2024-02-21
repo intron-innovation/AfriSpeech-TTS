@@ -5,7 +5,7 @@ results/*.wav
 src/.DS_Store
 *__pycache__*
 audio
-data/temp
+temp
 train
 dev
 test
@@ -16,3 +16,4 @@ afrispeech_16k_*
 .ipynb_checkpoints
 *.sh
 notebooks/afrotts.ipynb
+afritts_vctk*

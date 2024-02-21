@@ -104,7 +104,7 @@ def english_cleaners2(text):
 
 
 def english_cleaners3(text):
-  '''Pipeline for English text, including abbreviation expansion. + punctuation + stress'''
+  '''Pipeline for British English text, including abbreviation expansion. + punctuation + stress'''
   text = convert_to_ascii(text)
   text = lowercase(text)
   text = expand_abbreviations(text)
