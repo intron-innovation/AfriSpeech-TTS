@@ -9,3 +9,4 @@ torchaudio==2.0.2
 torchvision==0.15.2
 Unidecode==1.3.6
 tensorboard==2.14.0
+nemo_text_processing

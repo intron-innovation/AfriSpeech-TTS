@@ -19,3 +19,4 @@ notebooks/afrotts.ipynb
 afritts_vctk*
 *.json
 nemo_experiments
+embeddings/

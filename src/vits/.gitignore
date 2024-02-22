@@ -13,3 +13,4 @@ train_ms_adapt.py
 train_ms_ft_copy.py
 models_adapt.py
 modules_adapt.py
+*_ext_ms.py

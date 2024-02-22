@@ -15,7 +15,7 @@
     "warmup_epochs": 5,
     "c_mel": 45,
     "c_kl": 1.0,
-    "pt_ckpt_path": "logs/vctk_ckpt/",
+    "pt_ckpt_path": "logs/vctk/",
     "keep_pt_spk_emb": true
   },
   "data": {
