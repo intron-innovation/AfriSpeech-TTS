@@ -500,9 +500,9 @@ class SynthesizerTrn(nn.Module):
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
     if self.n_speakers > 0:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
-      if isinstance(sid, list):
+      if len(g.shape) == 4:
         # average embeddings
-        g = torch.mean(g, dim=0).unsqueeze(0) # [b, h, 1]
+        g = torch.mean(g, dim=1) # [b, h, 1]
     
     else:
       g = None
