@@ -62,6 +62,7 @@ def load_afri_speech_data(
     :param data_path: str
     :return: Dataset instance
     """
+
     data = pd.read_csv(data_path)
     data["audio_paths"] = data["audio_paths"].apply(
         lambda x: x.replace("/AfriSpeech-TTS-D/", audio_dir)

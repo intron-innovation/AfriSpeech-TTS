@@ -194,7 +194,7 @@ if __name__ == "__main__":
         gradient_checkpointing=True if config['hyperparameters']['gradient_checkpointing'] == "True" else False,
         ddp_find_unused_parameters=True if config['hyperparameters']['ddp_find_unused_parameters'] == "True" else False,
         evaluation_strategy="steps",
-        num_train_epochs=int(config['hyperparameters']['num_epochs']),
+        max_steps=int(config['hyperparameters']['max_steps']),
         fp16=torch.cuda.is_available(),
         save_steps=int(config['hyperparameters']['save_steps']),
         eval_steps=int(config['hyperparameters']['eval_steps']),
