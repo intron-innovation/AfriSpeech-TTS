@@ -45,7 +45,7 @@ class DataConfig:
 
 
 def load_afri_speech_data(
-        data_path, max_audio_len_secs=30, audio_dir=f"./data/",
+        data_path, max_audio_len_secs=200, audio_dir=f"./data/",
         return_dataset=True, split="dev", gpu=-1, domain='all',
         max_transcript_len=-1, min_transcript_len=-1
 ):
@@ -64,7 +64,7 @@ def load_afri_speech_data(
     """
     data = pd.read_csv(data_path)
     data["audio_paths"] = data["audio_paths"].apply(
-        lambda x: x.replace("/AfriSpeech-TTS/", audio_dir)
+        lambda x: x.replace("/AfriSpeech-TTS-D/", audio_dir)
     )
     
     if not os.path.exists(data["audio_paths"].values.tolist()[0]):
