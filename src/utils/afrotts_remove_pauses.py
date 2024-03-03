@@ -67,9 +67,10 @@ def preprocess_wav(data, dst_path, cpu_proc, target_sr=16000):
             
             # cater for case where sound is too low and vad views the entire utterance as silence
             duration = len(wav_temp)/source_sr
-            if duration == 0.0:
+            if duration < 1.0:
                 print(f"Warning: file {file_name_wav} has a 0 duration")
-                wav_temp = wav
+                continue
+                # wav_temp = wav
 
             soundfile.write(file=dst, data=wav_temp, samplerate=target_sr, format=None)
 
@@ -187,8 +188,8 @@ if __name__ == "__main__":
 
     data = pd.concat([train, dev, test])
     
-    # limit the max duration to 30 secs for faster computation
-    # data = data[data.duration <= 100.0].copy()
+    # limit the max duration to 50 secs for faster computation
+    data = data[data.duration <= 50.0].copy()
 
     dst_path = os.path.join(dir_path, "afrispeech_16k_trimmed")
     main(data, dst_path)

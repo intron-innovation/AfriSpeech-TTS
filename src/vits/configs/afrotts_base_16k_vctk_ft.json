@@ -1,13 +1,13 @@
 {
   "train": {
     "log_interval": 200,
-    "eval_interval": 1000,
+    "eval_interval": 5000,
     "seed": 1234,
     "epochs": 10000,
     "learning_rate": 2e-4,
     "betas": [0.8, 0.99],
     "eps": 1e-9,
-    "batch_size": 16,
+    "batch_size": 8,
     "fp16_run": true,
     "lr_decay": 0.999875,
     "segment_size": 8192,
@@ -15,8 +15,7 @@
     "warmup_epochs": 5,
     "c_mel": 45,
     "c_kl": 1.0,
-    "pt_ckpt_path": "logs/vctk/",
-    "keep_pt_spk_emb": true
+    "pt_ckpt_path": "logs/vctk/"
   },
   "data": {
     "training_files":"filelists/afritts_vctk_train.txt.cleaned",
@@ -32,7 +31,8 @@
     "mel_fmax": null,
     "add_blank": true,
     "n_speakers": 856,
-    "cleaned_text": true
+    "cleaned_text": true,
+    "max_text_len": 400
   },
   "model": {
     "inter_channels": 192,

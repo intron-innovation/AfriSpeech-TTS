@@ -11,6 +11,7 @@ dev
 test
 checkpoints
 *.wav
+afrispeech_voicefix
 afrispeech_16k
 afrispeech_16k_*
 .ipynb_checkpoints
@@ -20,3 +21,12 @@ afritts_vctk*
 *.json
 nemo_experiments
 embeddings/
+checkpoints
+*_temp.*
+*-upsamp.csv
+*-ups-clean.csv
+hifi-gan-bwe.ipynb
+mos_files.*
+mos_files_*
+*_ups.txt*
+AfriSpeech-Models

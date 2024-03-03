@@ -1,7 +1,7 @@
 {
   "train": {
     "log_interval": 200,
-    "eval_interval": 1000,
+    "eval_interval": 5000,
     "seed": 1234,
     "epochs": 10000,
     "learning_rate": 2e-4,
@@ -29,8 +29,9 @@
     "mel_fmin": 0.0,
     "mel_fmax": null,
     "add_blank": true,
-    "n_speakers": 747,
-    "cleaned_text": true
+    "n_speakers": 751,
+    "cleaned_text": true,
+    "max_text_len": 400
   },
   "model": {
     "inter_channels": 192,

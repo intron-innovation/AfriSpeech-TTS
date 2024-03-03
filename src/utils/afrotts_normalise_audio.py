@@ -48,7 +48,7 @@ int16_max = (2 ** 15) - 1
 def preprocess_wav(data, dst_path, cpu_proc, target_sr=16000):
     # pip3 install ffmpeg-normalize
     for i, item in data.iterrows():
-        src = os.path.join(dir_path, "afrispeech_16k_denoised",
+        src = os.path.join(dir_path, "afrispeech_16k_cleaned",
                            item.audio_paths[1:])
 
         
@@ -132,8 +132,8 @@ if __name__ == "__main__":
 
     data = pd.concat([train, dev, test])
     
-    # limit the max duration to 30 secs for faster computation
-    data = data[data.duration <= 200.0].copy()
+    # limit the max duration to 50 secs for faster computation
+    data = data[data.duration <= 50.0].copy()
 
     dst_path = os.path.join(dir_path, "afrispeech_16k_norm")
     main(data, dst_path)

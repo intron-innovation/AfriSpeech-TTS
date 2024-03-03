@@ -100,7 +100,10 @@ def english_cleaners2(text):
   text = convert_to_ascii(text)
   text = lowercase(text)
   text = expand_abbreviations(text)
-  phonemes = phonemize(text, language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
+  phonemes = phonemize(text, language='en-us', backend='espeak', 
+                       strip=True, preserve_punctuation=True, 
+                       with_stress=True, words_mismatch="ignore",
+                       )
   phonemes = collapse_whitespace(phonemes)
   return phonemes
 
@@ -110,6 +113,10 @@ def english_cleaners3(text):
   text = convert_to_ascii(text)
   text = lowercase(text)
   text = expand_abbreviations(text)
-  phonemes = phonemize(text, language='en', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
+  phonemes = phonemize(text, language='en', backend='espeak',
+                       language_switch='remove-flags', 
+                       strip=True, preserve_punctuation=True,
+                       with_stress=False, words_mismatch="ignore",
+                       njobs=1,)
   phonemes = collapse_whitespace(phonemes)
   return phonemes
