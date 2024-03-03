@@ -61,13 +61,12 @@ def expand_punctuations(text):
     text = re.sub(pattern, lambda m: _punctuations.get(m.group(0).upper()), text, flags=re.IGNORECASE)
     return text
 
-def tts_cleaner(text, inference=False,):
+def tts_cleaner(text,):
     '''Pipeline for English text, including abbreviation expansion.'''
     # text = convert_to_ascii(text)
     text = lowercase(text)
     text = expand_abbreviations(text)
-    if not inference
-        text = expand_punctuations(text)
+    text = expand_punctuations(text)
     
     # handles normalizing numbers
     text = text_normalizer.normalize(text)
