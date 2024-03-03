@@ -9,7 +9,5 @@ build
 monotonic_align/monotonic_align
 layers_dora.py
 LoRA
-train_ms_adapt.py
+*_adapt*
 train_ms_ft_copy.py
-models_adapt.py
-modules_adapt.py

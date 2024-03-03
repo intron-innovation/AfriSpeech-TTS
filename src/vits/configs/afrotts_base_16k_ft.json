@@ -19,7 +19,7 @@
     "keep_pt_spk_emb": false
   },
   "data": {
-    "training_files":"filelists/afritts_train.txt.cleaned",
+    "training_files":"filelists/afritts_train_ups.txt.cleaned",
     "validation_files":"filelists/afritts_dev.txt.cleaned",
     "text_cleaners":["english_cleaners3"],
     "max_wav_value": 32768.0,

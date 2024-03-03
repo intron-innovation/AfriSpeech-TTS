@@ -11,9 +11,7 @@ dev
 test
 checkpoints
 *.wav
-afrispeech_voicefix
-afrispeech_16k
-afrispeech_16k_*
+afrispeech_*
 .ipynb_checkpoints
 *.sh
 notebooks/afrotts.ipynb
