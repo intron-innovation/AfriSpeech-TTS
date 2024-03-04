@@ -11,6 +11,7 @@ dev
 test
 checkpoints
 *.wav
+*.spec.pt
 afrispeech_*
 .ipynb_checkpoints
 *.sh
@@ -24,7 +25,6 @@ checkpoints
 *-upsamp.csv
 *-ups-clean.csv
 hifi-gan-bwe.ipynb
-mos_files.*
-mos_files_*
+mos_files*
 *_ups.txt*
 AfriSpeech-Models
