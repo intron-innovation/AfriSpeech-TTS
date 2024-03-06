@@ -1,4 +1,4 @@
-"""This code is adapted for common voice preprocessing from https://github.com/resemble-ai/Resemblyzer/blob/199c632495cfd288ca63b790e789616c91d44a01/resemblyzer/audio.py"""
+
 
 import multiprocessing
 import os
@@ -9,41 +9,14 @@ import librosa
 import numpy as np
 import pandas as pd
 import soundfile
-import webrtcvad
-
-# from resemblyzer.hparams import *
-from scipy.ndimage.morphology import binary_dilation
+# import webrtcvad
 
 from glob import glob
 
+# pip3 install ffmpeg-normalize
 
 ## Audio
 sampling_rate = 16000
-# Number of spectrogram frames in a partial utterance
-partials_n_frames = 160  # 1600 ms
-
-
-## Voice Activation Detection
-# Window size of the VAD. Must be either 10, 20 or 30 milliseconds.
-# This sets the granularity of the VAD. Should not need to be changed.
-vad_window_length = 30  # In milliseconds
-# Number of frames to average together when performing the moving average smoothing.
-# The larger this value, the larger the VAD variations must be to not get smoothed out.
-vad_moving_average_width = 24 # 8
-# Maximum number of consecutive silent frames a segment can have.
-vad_max_silence_length = 4
-
-
-## Audio volume normalization
-audio_norm_target_dBFS = -20
-
-
-## Model parameters
-model_hidden_size = 256
-model_embedding_size = 256
-model_num_layers = 3
-int16_max = (2 ** 15) - 1
-
 
 def preprocess_wav(data, dst_path, cpu_proc, target_sr=16000):
     # pip3 install ffmpeg-normalize
@@ -61,7 +34,6 @@ def preprocess_wav(data, dst_path, cpu_proc, target_sr=16000):
         # normalise volume
         if os.path.exists(src):
             try:
-                # cmd = f"ffmpeg -loglevel panic -y -i {src} -f s16le -acodec pcm_s16le {dst}"
                 cmd = f"ffmpeg-normalize {src} -o {dst} -ar 16000 --target-level -27 -nt rms"
                 os.system(cmd)
             except Exception:
@@ -131,6 +103,7 @@ if __name__ == "__main__":
     test = pd.read_csv(os.path.join(dir_path, "data/intron-tts-test-public-4161.csv"))
 
     data = pd.concat([train, dev, test])
+    data = data.sample(frac=1)
     
     # limit the max duration to 50 secs for faster computation
     data = data[data.duration <= 50.0].copy()

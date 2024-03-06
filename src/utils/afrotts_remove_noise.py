@@ -73,6 +73,7 @@ if __name__ == "__main__":
     test = pd.read_csv(os.path.join(dir_path, "data/intron-tts-test-public-4161.csv"))
 
     data = pd.concat([train, dev, test])
+    data = data.sample(frac=1)
     
     # can limit the max duration to 50 secs for faster computation
     data = data[data.duration <= 50.0].copy()

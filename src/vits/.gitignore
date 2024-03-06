@@ -11,3 +11,6 @@ layers_dora.py
 LoRA
 *_adapt*
 train_ms_ft_copy.py
+afritts_accent_interpolate
+afritts_accent_interpolate_no_gender/
+afritts_test_seen/

@@ -50,7 +50,6 @@ def preprocess_wav(data, dst_path, cpu_proc, target_sr=16000):
     for i, item in data.iterrows():
         src = os.path.join(dir_path, "afrispeech_16k_norm",
                            item.audio_paths[1:])
-
         
         dst = os.path.join(dst_path, item.audio_paths[1:])
         
@@ -69,14 +68,19 @@ def preprocess_wav(data, dst_path, cpu_proc, target_sr=16000):
             duration = len(wav_temp)/source_sr
             if duration < 1.0:
                 print(f"Warning: file {file_name_wav} has a 0 duration")
-                continue
-                # wav_temp = wav
-
+                # continue
+                
+            #resample
+            if source_sr != target_sr:
+                wav_temp = librosa.resample(wav_temp, orig_sr=source_sr, target_sr=target_sr)
+            
             soundfile.write(file=dst, data=wav_temp, samplerate=target_sr, format=None)
 
         except Exception:
-            print(f"File {item.audio_paths} unable to be processed")
-            continue
+            print(f"File {src} unable to be processed")
+            break
+            # continue
+
 
     print(f"Process {cpu_proc} finished")
 
@@ -187,6 +191,7 @@ if __name__ == "__main__":
     test = pd.read_csv(os.path.join(dir_path, "data/intron-tts-test-public-4161.csv"))
 
     data = pd.concat([train, dev, test])
+    data = data.sample(frac=1)
     
     # limit the max duration to 50 secs for faster computation
     data = data[data.duration <= 50.0].copy()

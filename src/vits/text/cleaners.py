@@ -107,10 +107,20 @@ def english_cleaners2(text):
   phonemes = collapse_whitespace(phonemes)
   return phonemes
 
+def expand_acronyms(text):
+  '''Expand abbreviations like USAID, TTS, etc,.'''
+  word_list = text.split(" ")
+  for i, word in enumerate(word_list):
+    if word.isupper():
+      word = ' '.join(x for x in list(word))
+      word_list[i] = word
+  return " ".join(x for x in word_list)
+
 
 def english_cleaners3(text):
   '''Pipeline for British English text, including abbreviation expansion. + punctuation + stress'''
   text = convert_to_ascii(text)
+  text = expand_acronyms(text)
   text = lowercase(text)
   text = expand_abbreviations(text)
   phonemes = phonemize(text, language='en', backend='espeak',
