@@ -28,3 +28,5 @@ hifi-gan-bwe.ipynb
 mos_files*
 *_ups.txt*
 AfriSpeech-Models
+combine_clean_data2*
+check_files_exist.py
