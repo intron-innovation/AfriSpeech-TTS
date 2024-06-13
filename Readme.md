@@ -1,5 +1,7 @@
 # AfriSpeech-TTS
 
+[![DOI](https://zenodo.org/badge/544588486.svg)](https://zenodo.org/doi/10.5281/zenodo.11630150)
+
 #### African Digital Voices: Pan-African parameter-efficient multi-accent multi-speaker TTS
 
 [By Intron Innovation](https://www.intron.io)
